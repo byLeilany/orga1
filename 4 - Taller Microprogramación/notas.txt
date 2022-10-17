@@ -1,0 +1,20 @@
+JMP seguir (DOS)
+1010 0000 - 0000 0010
+A0 - 02 
+
+0x02 -> seguir:
+SET R0, 0xFF
+inst = 11111 000 11111111
+mem  = 1111 1000 1111 1111
+F8 FF
+ 	
+SET R1, 0x11
+
+
+
+
+siguiente:
+ADD R0, R1
+JC siguiente
+halt:
+JMP halt
